@@ -2,6 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Wallet, Truck, Leaf, Award, ArrowUpRight, ArrowRight, X, Droplets, Zap, Wind, TreeDeciduous } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+const facts = [
+    "Recycling one ton of paper saves 17 trees, 7,000 gallons of water, and 3 cubic yards of landfill space!",
+    "Recycling a single aluminum can saves enough energy to power a TV for 3 hours.",
+    "Glass can be recycled endlessly with no loss in quality or purity.",
+    "Recycling plastic water bottles saves oil and reduces greenhouse gas emissions.",
+    "E-waste contains precious metals like gold and silver that can be recovered and reused."
+];
+
 const UserDashboard = () => {
     const navigate = useNavigate();
     const [showReport, setShowReport] = useState(false);
@@ -17,14 +25,6 @@ const UserDashboard = () => {
     });
     const [fact, setFact] = useState('');
     const [userName, setUserName] = useState('John'); // Default
-
-    const facts = [
-        "Recycling one ton of paper saves 17 trees, 7,000 gallons of water, and 3 cubic yards of landfill space!",
-        "Recycling a single aluminum can saves enough energy to power a TV for 3 hours.",
-        "Glass can be recycled endlessly with no loss in quality or purity.",
-        "Recycling plastic water bottles saves oil and reduces greenhouse gas emissions.",
-        "E-waste contains precious metals like gold and silver that can be recovered and reused."
-    ];
 
     useEffect(() => {
         // Load user name

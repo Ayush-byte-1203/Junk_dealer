@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './Dealer.css';
-import { BarChart3, TrendingUp, Users, DollarSign, Package, AlertTriangle, ArrowUpRight, ArrowDownRight, Search, Filter, Download } from "lucide-react";
+import { TrendingUp, Users, DollarSign, Package, AlertTriangle, ArrowUpRight, ArrowDownRight, Search, Filter, Download } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 // --- Add Product Component ---
@@ -309,7 +309,6 @@ export const DealerAnalytics = () => {
 // --- Dealer Inventory Component ---
 export const DealerInventory = () => {
     const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('All Categories');
     const [stockFilter, setStockFilter] = useState('Stock Status');
@@ -328,8 +327,6 @@ export const DealerInventory = () => {
             }
         } catch (error) {
             console.error('Error fetching inventory:', error);
-        } finally {
-            setLoading(false);
         }
     };
 
@@ -738,7 +735,6 @@ export const DealerSettings = () => {
         notificationsEnabled: false
     });
 
-    const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState('Business Profile');
 
     useEffect(() => {
@@ -767,8 +763,6 @@ export const DealerSettings = () => {
             }
         } catch (error) {
             console.error('Error fetching profile:', error);
-        } finally {
-            setLoading(false);
         }
     };
 
@@ -1007,7 +1001,6 @@ export const DealerSettings = () => {
 
 export const MyProducts = () => {
     const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -1030,8 +1023,6 @@ export const MyProducts = () => {
             }
         } catch (error) {
             console.error('Error fetching products:', error);
-        } finally {
-            setLoading(false);
         }
     };
 
@@ -1059,7 +1050,10 @@ export const MyProducts = () => {
                     <h1 className="text-2xl font-bold text-slate-900">My Products</h1>
                     <p className="text-slate-500">Manage your listed scrap materials</p>
                 </div>
-                <button className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition flex items-center gap-2">
+                <button
+                    onClick={() => navigate('/dealer-add-product')}
+                    className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition flex items-center gap-2"
+                >
                     <span>+</span> Add New Product
                 </button>
             </div>
@@ -1086,7 +1080,7 @@ export const MyProducts = () => {
                                     </td>
                                     <td className="px-6 py-4">
                                         <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600">
-                                            {product.category}
+                                             {product.category}
                                         </span>
                                     </td>
                                     <td className="px-6 py-4 font-medium text-emerald-600">₹{product.price}</td>
@@ -1103,7 +1097,7 @@ export const MyProducts = () => {
                                     </td>
                                     <td className="px-6 py-4 text-right">
                                         <button className="text-slate-400 hover:text-emerald-600 transition mx-1">Edit</button>
-                                        <button className="text-slate-400 hover:text-red-600 transition mx-1">Delete</button>
+                                        <button onClick={() => handleDelete(product.id)} className="text-slate-400 hover:text-red-600 transition mx-1">Delete</button>
                                     </td>
                                 </tr>
                             ))}

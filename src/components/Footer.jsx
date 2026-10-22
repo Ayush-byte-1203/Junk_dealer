@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
-import { Recycle, Facebook, Twitter, Instagram, Youtube, Mail, ArrowRight, MapPin, Phone, Smartphone } from "lucide-react"
+import { Recycle, Facebook, Twitter, Instagram, Youtube, ArrowRight, Smartphone } from "lucide-react"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { useLanguage } from "../context/LanguageContext"

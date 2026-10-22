@@ -2,14 +2,13 @@ import React, { useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import { Calendar, Clock, MapPin, Weight, Info, Truck, ChevronRight, ArrowLeft, Camera, X, Package, CheckCircle, Scale, Upload } from 'lucide-react';
+import { Calendar, Clock, MapPin, Info, Truck, Camera, X, Package, CheckCircle, Scale, Upload } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
-import { Card, CardContent } from "../components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger } from "../components/ui/select";
 
 // Helper to get readable label
 const getMaterialLabel = (value) => {
@@ -24,22 +23,11 @@ const getMaterialLabel = (value) => {
     return map[value] || value;
 };
 
-// Rates per kg (approximate)
-const MATERIAL_RATES = {
-    'paper': 12,
-    'plastic': 15,
-    'metal': 35, // Average of Iron/Steel
-    'ewaste': 100, // Average per unit/kg
-    'glass': 2,
-    'other': 0
-};
-
 const SchedulePickup = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const { user } = useAuth();
     const [loading, setLoading] = useState(false);
-    const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         scrapType: '',
         weight: '',
@@ -78,7 +66,6 @@ const SchedulePickup = () => {
     };
 
     const handlePickupSuccess = async (paymentId) => {
-        const pickupCharge = 40;
         let apiData = {};
 
         // Prepare Data for API
@@ -124,16 +111,7 @@ const SchedulePickup = () => {
             console.error("API Error", error);
         }
 
-        // Keep LocalStorage for fallback/UI (optional, but good for immediate feedback)
-        let newPickup = {
-            id: `PKP-${Date.now()}`,
-            status: 'Scheduled',
-            ...formData,
-            paymentId,
-            timestamp: Date.now()
-        };
-        // ... (rest of local storage logic if needed, but we rely on backend now)
-        // Actually, let's keep the user redirection logic
+        // Keep user redirection logic
 
         if (location.state?.cartItems) {
             localStorage.removeItem('cart_items');

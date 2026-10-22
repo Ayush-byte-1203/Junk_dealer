@@ -9,7 +9,6 @@ import {
     LogOut,
     Menu,
     X,
-    User,
     Recycle
 } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';

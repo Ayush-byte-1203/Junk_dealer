@@ -15,7 +15,7 @@ import {
 } from "./ui/dropdown-menu"
 import { Avatar, AvatarFallback } from "./ui/avatar"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
-import { Recycle, LayoutDashboard, Package, PlusCircle, ClipboardList, Truck, User, LogOut, Settings, Menu, ChevronDown, Bell, Lock, ShoppingCart } from "lucide-react"
+import { Recycle, LayoutDashboard, Package, ClipboardList, User, LogOut, Settings, Menu, ChevronDown, Bell, Lock, ShoppingCart } from "lucide-react"
 
 export function Navbar({ showLinks = true, showLogo = true, showMobileMenu = true }) {
     const [isOpen, setIsOpen] = useState(false)

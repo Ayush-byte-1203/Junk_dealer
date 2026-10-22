@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import { Search, TrendingUp, DollarSign, Package, AlertCircle } from 'lucide-react';
+import { Search, TrendingUp, Package, AlertCircle } from 'lucide-react';
 import { Input } from "../components/ui/input";
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";

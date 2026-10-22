@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import { Package, Calendar, MapPin, ChevronRight, Search, Truck, X, Download } from 'lucide-react';
+import { Package, Truck, X, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";

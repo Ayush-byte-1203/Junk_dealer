@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../context/LanguageContext';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { Calculator, Plus, Trash2, RefreshCw, Save } from 'lucide-react';
@@ -8,10 +7,8 @@ import { Input } from "../components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../components/ui/card";
 
 const ScrapCalculator = () => {
-    const { t } = useLanguage();
     const [rates, setRates] = useState([]);
     const [items, setItems] = useState([{ materialId: '', weight: '' }]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         // Fetch rates for the dropdown
@@ -32,8 +29,6 @@ const ScrapCalculator = () => {
                     { id: 4, material: 'Plastic', price: 15, unit: 'kg' },
                     { id: 5, material: 'Newspaper', price: 12, unit: 'kg' },
                 ]);
-            } finally {
-                setLoading(false);
             }
         };
         fetchRates();

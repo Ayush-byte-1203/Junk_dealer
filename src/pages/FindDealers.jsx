@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import { MapPin, Search, Recycle, CheckCircle, Star, Clock, Coins, Truck, ArrowRight, Loader2, Navigation } from 'lucide-react';
+import { MapPin, Recycle, CheckCircle, Star, Clock, Loader2, Navigation } from 'lucide-react';
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";

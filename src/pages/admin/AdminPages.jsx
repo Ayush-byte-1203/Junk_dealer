@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, MoreVertical, Edit, Trash2, CheckCircle, XCircle, AlertTriangle, Eye, Download, UserPlus, FileText } from 'lucide-react';
+import { Search, Edit, Trash2, CheckCircle, XCircle, AlertTriangle, Eye, Download, UserPlus } from 'lucide-react';
 import './Admin.css';
 
 // --- User Management Component ---
@@ -610,7 +610,6 @@ export const AdminOrders = () => {
 export const AdminPickups = () => {
     const [pickups, setPickups] = useState([]);
     const [selectedPickup, setSelectedPickup] = useState(null);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetchPickups();
@@ -621,10 +620,8 @@ export const AdminPickups = () => {
             const response = await fetch('http://localhost:8000/api/admin/pickups/');
             const data = await response.json();
             setPickups(data);
-            setLoading(false);
         } catch (error) {
             console.error('Error fetching pickups:', error);
-            setLoading(false);
         }
     };
 
@@ -775,7 +772,6 @@ export const AdminPickups = () => {
 // --- Product Management Component ---
 export const ProductManagement = () => {
     const [pendingProducts, setPendingProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetchPendingProducts();
@@ -790,8 +786,6 @@ export const ProductManagement = () => {
             }
         } catch (error) {
             console.error("Error fetching pending products:", error);
-        } finally {
-            setLoading(false);
         }
     };
 

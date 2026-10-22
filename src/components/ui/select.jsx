@@ -2,30 +2,10 @@ import * as React from "react"
 import { cn } from "../../lib/utils"
 import { ChevronDown, Check } from "lucide-react"
 
-// Simple Select implementation without Radix UI to minimize dependencies if not already present
-// Adapting to use standard HTML select for simplicity if Radix is not fully set up,
-// OR implementing a custom dropdown to match the design.
-// Given strict missing module error, user might not have @radix-ui/react-select.
-// I will implement a custom visual Select using standard React state to capture the look.
-
-// Actually, to be safe and quick, I will implement a visual wrapper around a standard select 
-// OR a custom one. The error was asking for `components/ui/select`.
-// Let's implement a clean custom one.
+const SelectContext = React.createContext({})
 
 const Select = ({ children, value, onValueChange, ...props }) => {
     const [open, setOpen] = React.useState(false);
-    const [selectedValue, setSelectedValue] = React.useState(value);
-
-    // Context for children to communicate? 
-    // For simplicity in a single file without complex context, let's use a robust approach 
-    // but maybe just a wrapper for this specific use case if we want to be very safe.
-    // However, the usage in Marketplace.jsx is:
-    // <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-    //    <SelectTrigger>...</SelectTrigger>
-    //    <SelectContent> <SelectItem...> </SelectContent>
-    // </Select>
-
-    // We need Context to share state.
 
     return (
         <SelectContext.Provider value={{ value, onValueChange, open, setOpen }}>
@@ -35,8 +15,6 @@ const Select = ({ children, value, onValueChange, ...props }) => {
         </SelectContext.Provider>
     )
 }
-
-const SelectContext = React.createContext({})
 
 const SelectTrigger = React.forwardRef(({ className, children, ...props }, ref) => {
     const { open, setOpen } = React.useContext(SelectContext)
@@ -59,50 +37,7 @@ const SelectTrigger = React.forwardRef(({ className, children, ...props }, ref) 
 SelectTrigger.displayName = "SelectTrigger"
 
 const SelectValue = React.forwardRef(({ className, placeholder, ...props }, ref) => {
-    const { value, children } = React.useContext(SelectContext);
-
-    // Helper to find the label of the selected value from children
-    // This is a basic traversal. In complex cases, we might need a map.
-    // Assuming Select children are SelectContent -> SelectItem
-    // This simple approach works if we can access the options.
-    // However, SelectContent is usually a child of Select, and SelectValue is a sibling of SelectContent (inside Trigger).
-    // The "children" of Select are Trigger and Content. Use children prop passed to Select?
-    // We captured children in SelectContext.
-
-    const getLabel = () => {
-        if (!value) return null;
-
-        let label = value; // Default to value if not found
-
-        // Recursive search for the label in the children tree would be ideal but complex.
-        // For this simple implementation, let's try to map it if possible, 
-        // OR simply pass the label in the onValueChange? User didn't ask for that.
-
-        // A better quick fix for "showing the label":
-        // In SchedulePickup, we know the mapping.
-        // But for a generic component, we need to find the SelectItem with value === value.
-        // Since we can't easily traverse the children prop here (it might be in a different subtree),
-        // we can rely on the SelectItem to register itself? Too complex.
-
-        // Let's assume for now that if value matches a known simple set we can just display it comfortably,
-        // or formatting it (e.g. capitalize).
-        // For "ewaste" -> "E-Waste" it's tricky.
-
-        // ACTUALLY: The easiest fix for visual correctness without full Radix complexity is:
-        // Pass a `displayValue` prop or similar from the parent if needed, 
-        // OR just capitalize for now if that's the main issue.
-        // But wait, the standard <select> shows the label.
-        // Let's IMPROVE the Context to allow Items to register their labels.
-        return label;
-    }
-
-    // Better Approach: Iterate over children of SelectContext (which are passed from Select)
-    // This is still fragile.
-    // Let's go with a simpler solution: render the value directly, but formatted.
-    // OR: Modify Select to accept `options` prop for easy lookup? No, that breaks the API.
-
-    // Correct fix: When SelectItem renders, if it matches the value, it could update a state in context "displayLabel".
-    // But rendering order matters.
+    const { value } = React.useContext(SelectContext);
 
     return (
         <span
@@ -110,7 +45,6 @@ const SelectValue = React.forwardRef(({ className, placeholder, ...props }, ref)
             className={cn("pointer-events-none block truncate", className)}
             {...props}
         >
-            {/* We will rely on a new context value 'selectedLabel' updated by the selected Item */}
             {props.selectedLabel || value || placeholder}
         </span>
     )
@@ -118,7 +52,7 @@ const SelectValue = React.forwardRef(({ className, placeholder, ...props }, ref)
 SelectValue.displayName = "SelectValue"
 
 const SelectContent = React.forwardRef(({ className, children, position = "popper", ...props }, ref) => {
-    const { open, setOpen } = React.useContext(SelectContext)
+    const { open } = React.useContext(SelectContext)
 
     if (!open) return null
 

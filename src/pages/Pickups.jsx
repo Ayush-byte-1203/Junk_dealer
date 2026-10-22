@@ -20,6 +20,7 @@ const Pickups = () => {
 
     React.useEffect(() => {
         fetchPickups();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const fetchPickups = async () => {

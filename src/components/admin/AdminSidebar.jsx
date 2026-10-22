@@ -11,7 +11,6 @@ import {
     FileText,
     Settings,
     LogOut,
-    User,
     Recycle
 } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';

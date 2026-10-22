@@ -10,11 +10,11 @@ import {
 } from '../ui/dropdown-menu';
 import { Avatar, AvatarFallback } from '../ui/avatar';
 import { Button } from '../ui/button';
-import { LayoutDashboard, Package, User, Settings, LogOut, ChevronDown, Bell, ShoppingCart, Globe } from 'lucide-react';
+import { LayoutDashboard, Package, User, Settings, LogOut, ChevronDown } from 'lucide-react';
 
 const UserHeader = () => {
     const navigate = useNavigate();
-    const { user, logout } = useAuth();
+    const { logout } = useAuth();
     const [userName, setUserName] = React.useState('John Doe');
     const [userInitials, setUserInitials] = React.useState('JD');
 

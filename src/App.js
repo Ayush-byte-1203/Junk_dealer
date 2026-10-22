@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { LanguageProvider } from './context/LanguageContext';
-import MainLayout from './layouts/MainLayout';
 import DashboardLayout from './layouts/DashboardLayout';
 import AdminLayout from './layouts/AdminLayout';
 import UserLayout from './layouts/UserLayout';
@@ -9,7 +8,6 @@ import AdminLogin from './pages/admin/AdminLogin';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import LoginModal from './components/LoginModal';
-import Home from './pages/Home';
 import About from './pages/About';
 import Team from './pages/Team';
 import Rates from './pages/ScrapRates';

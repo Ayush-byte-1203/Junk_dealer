@@ -71,7 +71,7 @@ const testimonials = [
 
 export function Testimonials() {
     const { t } = useLanguage()
-    const [activeIndex, setActiveIndex] = useState(0)
+    const [, setActiveIndex] = useState(0)
 
     const nextSlide = () => {
         setActiveIndex((prev) => (prev + 1) % Math.ceil(testimonials.length / 3))
@@ -229,7 +229,6 @@ function CountUp({ end, duration = 2000, decimals = 0, separator = "", suffix = 
 
     const formattedCount = count.toFixed(decimals)
     const [integerPart, decimalPart] = formattedCount.split(".")
-    const formattedInteger = Number(integerPart).toLocaleString()
     // Handle separator manually if needed, or rely on toLocaleString for standard comma separator
     // Since toLocaleString handles commas significantly better, we reuse it.
     // However, for strict control based on user request (e.g. 5,000), let's ensure we match.

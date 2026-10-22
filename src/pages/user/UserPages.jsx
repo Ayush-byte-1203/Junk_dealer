@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Calendar,  Download,  Camera, Edit2, Hammer, Cpu, LayoutGrid, Newspaper, Milk, Monitor, Trophy, Square, Book, ArrowUp, ArrowDown, Minus } from 'lucide-react';
+import { MapPin, Calendar, Download, Camera } from 'lucide-react';
 
 // --- My Pickups Component ---
 export const MyPickups = () => {
@@ -358,8 +358,6 @@ export const UserSettings = () => {
         };
     });
 
-    const [isEditing, setIsEditing] = React.useState(false);
-    const [tempProfile, setTempProfile] = React.useState(profile);
     const [showSaveMsg, setShowSaveMsg] = React.useState(false);
 
     const handleChange = (e) => {

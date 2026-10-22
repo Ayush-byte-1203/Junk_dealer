@@ -12,7 +12,6 @@ import {
     Store,
     Banknote,
     FileText,
-    User,
     LogOut,
     ChevronLeft,
     ChevronRight,
