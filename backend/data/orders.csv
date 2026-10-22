@@ -1,0 +1,19 @@
+id,user_id,dealer_id,pickup_id,amount,status,date,description
+1,1,2,1,140,Completed,2024-01-25,Payment for Newspaper (10kg)
+2,4,6,4,550,Completed,2024-01-20,Payment for Aluminium (5kg)
+3,11,7,7,1000,Completed,2024-02-01,Payment for E-waste (20kg)
+4,12,8,10,77,Completed,2024-01-30,Payment for Plastic (7kg)
+5,13,10,12,20,Completed,2024-01-10,Payment for Tyres (4pcs)
+6,14,9,14,120,Completed,2024-01-22,Payment for Steel (3kg)
+7,15,8,16,110,Completed,2024-01-18,Payment for Plastic (10kg)
+8,1,7,17,1300,Completed,2024-01-05,Payment for Iron (50kg)
+9,1,2,2,1000,Pending,2024-02-01,Scheduled pickup for Iron
+10,4,6,3,230,Pending,2024-02-10,Pending pickup for Copper
+11,5,8,6,120,Pending,2024-02-05,Scheduled pickup for Books
+12,11,7,8,120,Pending,2024-02-12,Scheduled pickup for Batteries
+13,13,6,11,20,Pending,2024-02-15,Scheduled pickup for Iron
+14,15,8,15,110,Pending,2024-02-18,Scheduled pickup for Newspaper
+15,11,6,20,200,Pending,2024-02-25,Pending pickup for Brass
+16,11,"[{""id"":""20"",""name"":""avd"",""price"":""123"",""category"":""Metals"",""quantity"":1}]",123,"{""fullName"":""Ayush Pancholi"",""phone"":""8320978291"",""address"":""45Dhaval Park Society , Near Nirman Park Society ,, Vishwamitri Road ,manjalpur"",""city"":""Vadodara"",""zipCode"":""390011"",""paymentMethod"":""online""}",online,Processing,2026-02-02,1
+17,11,"[{""id"":""3"",""name"":""Metal Pipes"",""price"":""40"",""category"":""Metal"",""quantity"":1},{""id"":""7"",""name"":""Woven Paper Basket"",""price"":""30"",""category"":""Paper"",""image"":""Woven Paper Basket.jpeg"",""quantity"":1}]",70,"{""fullName"":""Ayush Pancholi"",""phone"":""8766533525"",""address"":""45Dhaval Park Society , Near Nirman Park Society ,, Vishwamitri Road ,manjalpur"",""city"":""Vadodara"",""zipCode"":""390011"",""paymentMethod"":""online""}",online,Processing,2026-02-02,1
+18,11,"[{""id"":""2"",""name"":""Metal Angles"",""price"":""35"",""category"":""Metal"",""image"":""Metal Angles.jpeg"",""quantity"":1},{""id"":""3"",""name"":""Metal Pipes"",""price"":""40"",""category"":""Metal"",""image"":""Metal Pipes.jpeg"",""quantity"":1}]",75,"{""fullName"":""Ayush Pancholi"",""phone"":""8320978291"",""address"":""45Dhaval Park Society , Near Nirman Park Society ,, Vishwamitri Road ,manjalpur"",""city"":""Vadodara"",""zipCode"":""390011"",""paymentMethod"":""online""}",online,Processing,2026-02-03,1

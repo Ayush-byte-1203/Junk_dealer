@@ -1,0 +1,385 @@
+/* ========================================
+   MODERN RATES SECTION STYLING
+   ======================================== */
+
+.rates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-top: 32px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+/* Rate Card */
+.rate-card-modern {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 2px solid;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    height: 100%;
+}
+
+.rate-card-modern:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Rate Card Header */
+.rate-card-header {
+    padding: 20px;
+    border-bottom: 3px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rate-material-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rate-material-icon {
+    font-size: 36px;
+    line-height: 1;
+}
+
+.rate-material-name {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Trend Badge */
+.rate-trend-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 2px solid;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.trend-icon {
+    font-size: 16px;
+}
+
+/* Rate Card Body */
+.rate-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rate-price-section {
+    text-align: center;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+}
+
+.rate-label {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.rate-price-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+}
+
+.rate-currency {
+    font-size: 24px;
+    font-weight: 700;
+    color: #059669;
+}
+
+.rate-amount {
+    font-size: 48px;
+    font-weight: 700;
+    color: #10b981;
+    line-height: 1;
+}
+
+.rate-unit {
+    font-size: 18px;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+/* Rate Info Grid */
+.rate-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.rate-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    background: #f9fafb;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.rate-info-item .info-icon {
+    font-size: 20px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.rate-info-item .info-label {
+    margin: 0;
+    font-size: 11px;
+    color: #6b7280;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rate-info-item .info-value {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f1111;
+}
+
+/* Rate Description */
+.rate-description {
+    padding: 16px;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-radius: 10px;
+    border: 1px solid #86efac;
+}
+
+.rate-description p {
+    margin: 0;
+    font-size: 13px;
+    color: #166534;
+    line-height: 1.6;
+}
+
+/* Rate Card Footer */
+.rate-card-footer {
+    padding: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.rate-action-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border: 2px solid;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rate-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.rate-action-btn .btn-icon {
+    font-size: 18px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Desktop - Large Screens (1200px+) */
+@media (min-width: 1200px) {
+    .rates-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
+        padding: 0 40px;
+        max-width: 1400px;
+    }
+
+    .rate-card-header {
+        padding: 24px;
+    }
+
+    .rate-material-icon {
+        font-size: 40px;
+    }
+
+    .rate-material-name {
+        font-size: 22px;
+    }
+
+    .rate-amount {
+        font-size: 48px;
+    }
+}
+
+/* Laptop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .rates-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding: 0 30px;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .rates-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 25px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rates-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .rate-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .rate-material-icon {
+        font-size: 30px;
+    }
+
+    .rate-material-name {
+        font-size: 18px;
+    }
+
+    .rate-card-body {
+        padding: 18px 15px;
+        gap: 15px;
+    }
+
+    .rate-amount {
+        font-size: 36px;
+    }
+
+    .rate-currency {
+        font-size: 20px;
+    }
+
+    .rate-unit {
+        font-size: 15px;
+    }
+
+    .rate-info-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .rate-card-footer {
+        padding: 15px;
+    }
+
+    .rate-action-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rates-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .rate-card-header {
+        padding: 12px;
+    }
+
+    .rate-material-icon {
+        font-size: 26px;
+    }
+
+    .rate-material-name {
+        font-size: 16px;
+    }
+
+    .rate-trend-badge {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+
+    .rate-card-body {
+        padding: 15px 12px;
+        gap: 12px;
+    }
+
+    .rate-price-section {
+        padding: 15px;
+    }
+
+    .rate-amount {
+        font-size: 32px;
+    }
+
+    .rate-currency {
+        font-size: 18px;
+    }
+
+    .rate-unit {
+        font-size: 13px;
+    }
+
+    .rate-info-item {
+        padding: 10px;
+    }
+
+    .rate-info-item .info-icon {
+        font-size: 18px;
+    }
+
+    .rate-info-item .info-value {
+        font-size: 13px;
+    }
+
+    .rate-description p {
+        font-size: 12px;
+    }
+
+    .rate-card-footer {
+        padding: 12px;
+    }
+
+    .rate-action-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}

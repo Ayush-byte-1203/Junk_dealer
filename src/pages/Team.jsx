@@ -62,36 +62,9 @@ const Team = () => {
                     <div className="mb-20">
                         <h2 className="text-3xl font-bold text-gray-800 mb-8 leading-tight">Team Members</h2>
 
-                        {/* Lead Member - Displayed prominently in the center */}
-                        {teammates.length > 0 && (
-                            <div className="flex justify-center mb-8">
-                                <div className="w-full max-w-md bg-white border border-gray-200 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-                                    <div className="flex flex-col items-center text-center">
-                                        <img
-                                            src={teammates[0].image}
-                                            alt={teammates[0].name}
-                                            className="w-24 h-24 rounded-full object-cover object-center border-2 border-gray-300 mb-4 flex-shrink-0"
-                                        />
-                                        <h3 className="text-xl font-bold text-gray-800 mb-1 leading-tight">{teammates[0].name}</h3>
-                                        <p className="text-gray-600 mb-4 text-base leading-normal">{teammates[0].role}</p>
-                                        <div className="flex flex-col gap-2 w-full">
-                                            <a href={`mailto:${teammates[0].email}`} className="flex items-center gap-2 text-gray-500 hover:text-green-700 transition-colors duration-200 text-sm justify-center leading-none no-underline">
-                                                <Mail size={16} className="flex-shrink-0" />
-                                                <span>Email</span>
-                                            </a>
-                                            <a href={`https://${teammates[0].linkedin}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-500 hover:text-green-700 transition-colors duration-200 text-sm justify-center leading-none no-underline">
-                                                <Linkedin size={16} className="flex-shrink-0" />
-                                                <span>LinkedIn</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Remaining Members - Grid Layout */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {teammates.slice(1).map((member, index) => (
+                        {/* All Members - 2x2 Grid Layout */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                            {teammates.map((member, index) => (
                                 <div
                                     key={index}
                                     className="bg-white border border-gray-200 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"

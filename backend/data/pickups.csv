@@ -1,0 +1,24 @@
+id,user_id,dealer_id,status,scheduled_date,items,total_weight,address,notes
+1,1,2,Completed,2024-01-25,Newspaper,10kg,123 Main St Mumbai,Morning pickup
+2,1,2,Scheduled,2024-02-01,Iron,5kg,123 Main St Mumbai,Call before reaching
+3,4,6,Pending,2024-02-10,Copper,2kg,456 Park Ave Delhi,Urgent
+4,4,6,Completed,2024-01-20,Aluminium,5kg,456 Park Ave Delhi,Afternoon
+5,5,8,Cancelled,2024-01-28,Plastic,8kg,789 Road Bangalore,Not available
+6,5,8,Scheduled,2024-02-05,Books,15kg,789 Road Bangalore,School books
+7,11,7,Completed,2024-02-01,E-waste,20kg,101 Block Mumbai,Old computers
+8,11,7,Scheduled,2024-02-12,Batteries,10kg,101 Block Mumbai,Inverter battery
+9,12,2,Pending,2024-02-08,Newspaper,12kg,202 Lane Mumbai,Weekend only
+10,12,8,Completed,2024-01-30,Plastic,7kg,202 Lane Mumbai,Bottles
+11,13,6,Scheduled,2024-02-15,Iron,30kg,303 St Ahmedabad,Heavy scrap
+12,13,10,Completed,2024-01-10,Tyres,4pcs,303 St Ahmedabad,Car tyres
+13,14,9,Pending,2024-02-20,Glass,5kg,404 Ave Hyderabad,Beer bottles
+14,14,9,Completed,2024-01-22,Steel,3kg,404 Ave Hyderabad,Utensils
+15,15,8,Scheduled,2024-02-18,Newspaper,25kg,505 Dr Goa,Old papers
+16,15,8,Completed,2024-01-18,Plastic,10kg,505 Dr Goa,Mixed plastic
+17,1,7,Completed,2024-01-05,Iron,50kg,123 Main St Mumbai,Renovation scrap
+18,4,8,Cancelled,2024-01-12,Newspaper,5kg,456 Park Ave Delhi,Rainy day
+19,5,10,Scheduled,2024-02-22,Copper,8kg,789 Road Bangalore,Wires
+20,11,6,Pending,2024-02-25,Brass,1kg,101 Block Delhi,Old taps
+21,11,1,Scheduled,2026-02-12,paper,2,dszbf,Time: Afternoon (12 PM - 4 PM)
+22,11,1,Scheduled,2026-02-12,glass,1,abcs,Time: Evening (4 PM - 8 PM)
+23,11,1,Scheduled,2026-02-04,plastic,2,manjalpur,Time: Morning (9 AM - 12 PM)

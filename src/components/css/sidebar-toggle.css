@@ -1,0 +1,94 @@
+/* Sidebar Toggle Button */
+.sidebar-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.toggle-line {
+    width: 20px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Sidebar collapsed state */
+.sidebar.collapsed {
+    width: 70px !important;
+}
+
+.sidebar.collapsed .sidebar-brand-text,
+.sidebar.collapsed .nav-text,
+.sidebar.collapsed .user-info h4,
+.sidebar.collapsed .user-info p {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-nav-item {
+    justify-content: center;
+    padding: 12px;
+}
+
+.sidebar.collapsed .nav-icon {
+    margin-right: 0;
+}
+
+.sidebar.collapsed .sidebar-user {
+    padding: 15px 10px;
+}
+
+.sidebar.collapsed .user-avatar {
+    margin-right: 0;
+}
+
+/* Smooth transitions */
+.sidebar {
+    transition: width 0.3s ease;
+}
+
+.sidebar-brand-text,
+.nav-text,
+.user-info h4,
+.user-info p {
+    transition: opacity 0.3s ease, visibility 0.3s ease, width 0.3s ease;
+}
+
+/* Adjust main content when sidebar is collapsed */
+.with-sidebar.sidebar-collapsed {
+    margin-left: 70px !important;
+}
+
+/* Animation for toggle button */
+.sidebar.collapsed .sidebar-toggle-btn .toggle-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.sidebar.collapsed .sidebar-toggle-btn .toggle-line:nth-child(2) {
+    opacity: 0;
+}
+
+.sidebar.collapsed .sidebar-toggle-btn .toggle-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}

@@ -1,0 +1,82 @@
+/**
+ * Junk Dealer Application - Main CSS Entry Point
+ * 
+ * This file serves as the main CSS entry point for the Junk Dealer application.
+ * It imports all other stylesheets in the correct order to ensure proper
+ * cascading and organization of styles.
+ * 
+ * CSS Architecture:
+ * - base.css: Reset, typography, and fundamental styles
+ * - components.css: Reusable UI components and patterns
+ * - layout.css: Page layout, grid systems, and structural styles
+ * - utilities.css: Helper classes and utility functions
+ * 
+ * Import Order:
+ * 1. Base styles (reset, typography, variables)
+ * 2. Component styles (buttons, forms, cards, etc.)
+ * 3. Layout styles (grid, sections, containers)
+ * 4. Utility styles (helpers, modifiers)
+ * 
+ * @author Junk Dealer Development Team
+ * @version 1.0.0
+ * @since 2024
+ */
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+/* Import base styles including CSS reset, typography, and CSS variables */
+@import url('./base.css');
+
+/* ========================================
+   COMPONENT STYLES
+   ======================================== */
+/* Import component styles for buttons, forms, cards, modals, and other UI elements */
+@import url('./components.css');
+
+/* ========================================
+   LAYOUT STYLES
+   ======================================== */
+/* Import layout styles for page structure, grid systems, and responsive design */
+@import url('./layout.css');
+/* Import sidebar specific styles */
+@import url('./sidebar-modern.css');
+
+/* ========================================
+   UTILITY STYLES
+   ======================================== */
+/* Import utility classes for spacing, colors, typography, and other helpers */
+@import url('./utilities.css');
+
+/* ========================================
+   HIGH CONTRAST OVERRIDES
+   ======================================== */
+/* Import high contrast text colors for maximum readability */
+@import url('./contrast.css');
+@import url("./product-detail.css");
+
+/* ========================================
+   ENHANCED PANELS
+   ======================================== */
+/* Import enhanced admin and dealer panel styles */
+@import url('./enhanced-panels.css');
+@import url("./reports.css");
+@import url("./map-fixes.css");
+
+/* ========================================
+   PAGE SPECIFIC STYLES
+   ======================================== */
+@import url("./home-modern.css");
+@import url("./about.css");
+@import url("./rates-modern.css");
+@import url("./tips-modern.css");
+@import url("./cart-modern.css");
+@import url("./pickups.css");
+@import url("./profile-modern.css");
+@import url("./dashboard-modern.css");
+@import url("./admin.css");
+@import url("./dealer-profile.css");
+@import url("./testimonials.css");
+@import url("./notifications.css");
+@import url("./find-dealers.css");
+@import url("./footer.css");

@@ -1,0 +1,23 @@
+/* Mobile Auth Buttons Styling */
+@media (max-width: 768px) {
+    .nav-link-auth {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white !important;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 700;
+        margin: 5px 0;
+    }
+
+    .nav-link-signup {
+        background: white;
+        color: #10b981 !important;
+        border: 2px solid #10b981;
+    }
+
+    .nav-link-auth:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+}

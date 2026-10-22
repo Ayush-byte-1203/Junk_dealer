@@ -1,0 +1,519 @@
+/* ========================================
+   MODERN HOME/LANDING PAGE STYLING
+   Compact & space-efficient design
+   ======================================== */
+
+/* Hero Section - Compact & Modern */
+.home-hero {
+    position: relative;
+    min-height: 480px;
+    /* Increased height for impact */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Soft Gradient using Design System Colors */
+    background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-700) 100%);
+    overflow: hidden;
+    margin-bottom: var(--space-8);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Abstract Background Pattern */
+.home-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(var(--color-primary-500) 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
+    opacity: 0.1;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.home-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: var(--space-6);
+}
+
+.home-hero-title {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-black);
+    margin-bottom: var(--space-4);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: white;
+}
+
+.home-hero-subtitle {
+    font-size: var(--text-xl);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-8);
+    opacity: 0.9;
+    color: var(--color-primary-50);
+}
+
+.home-hero-cta {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+}
+
+/* Improved Buttons */
+.hero-btn {
+    padding: var(--space-4) var(--space-8);
+    font-size: var(--text-base);
+    font-weight: var(--font-bold);
+    border-radius: var(--radius-full);
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.hero-btn-primary {
+    background: white;
+    color: var(--color-primary-700);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+    background: var(--color-primary-50);
+}
+
+.hero-btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.hero-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+/* Features Section - Compact & Clean */
+.home-features {
+    padding: var(--space-12) 0;
+    background: var(--color-background);
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.features-header h2 {
+    color: var(--color-primary-800) !important;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.feature-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--color-border);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary-300);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: var(--space-4);
+    display: inline-block;
+}
+
+.feature-card h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-2);
+}
+
+.feature-card p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+/* Stats Section - Modern Glass Effect */
+.home-stats {
+    background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-600) 100%);
+    padding: var(--space-8) var(--space-6);
+    margin: var(--space-8) 0;
+    border-radius: var(--radius-lg);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-6);
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    text-align: center;
+    color: white;
+    padding: var(--space-6);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.stat-number {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-black);
+    margin-bottom: var(--space-2);
+    display: block;
+}
+
+.stat-label {
+    font-size: var(--text-xs);
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: var(--font-bold);
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: var(--space-12) var(--space-4);
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.how-it-works h2 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-black);
+    color: var(--color-primary-800);
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-8);
+}
+
+.step-card {
+    text-align: center;
+    position: relative;
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid var(--color-border);
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary-200);
+}
+
+.step-number {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));
+    color: white;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    margin: 0 auto var(--space-6);
+    box-shadow: var(--shadow-md);
+}
+
+.step-card h3 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-2);
+}
+
+.step-card p {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--color-gray-600);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .home-hero-title {
+        font-size: 36px;
+    }
+
+    .home-hero-subtitle {
+        font-size: 16px;
+    }
+
+    .features-grid,
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-hero {
+        min-height: 350px;
+        border-radius: 0 0 20px 20px;
+        margin-bottom: 25px;
+    }
+
+    .home-hero-content {
+        padding: 20px 15px;
+    }
+
+    .home-hero-title {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .home-hero-subtitle {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .home-hero-cta {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 30px;
+    }
+
+    .features-header h2,
+    .how-it-works h2 {
+        font-size: 28px;
+    }
+
+    .features-header p {
+        font-size: 14px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 25px 20px;
+    }
+
+    .home-stats {
+        padding: 30px 20px;
+        margin: 25px 0;
+        border-radius: 18px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+    .how-it-works {
+        padding: 25px 15px;
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .step-card {
+        padding: 20px;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .step-card h3 {
+        font-size: 17px;
+    }
+
+    .step-card p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-hero {
+        min-height: 300px;
+        padding: 15px 10px;
+    }
+
+    .home-hero-content {
+        padding: 15px 10px;
+    }
+
+    .home-hero-title {
+        font-size: 26px;
+    }
+
+    .home-hero-subtitle {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    .home-hero-cta {
+        gap: 10px;
+    }
+
+    .hero-btn {
+        font-size: 13px;
+        padding: 12px 20px;
+    }
+
+    .features-header h2,
+    .how-it-works h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .features-header p {
+        font-size: 13px;
+    }
+
+    /* Maintain 2-column grid on mobile */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .feature-card {
+        padding: 20px 15px;
+        border-radius: 14px;
+    }
+
+    .feature-icon {
+        font-size: 38px;
+        margin-bottom: 12px;
+    }
+
+    .feature-card h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .feature-card p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* 2-column grid for stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat-item {
+        padding: 16px 12px;
+    }
+
+    .stat-number {
+        font-size: 26px;
+        margin-bottom: 6px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .home-stats {
+        padding: 20px 12px;
+        margin: 20px 10px;
+    }
+
+    .how-it-works {
+        padding: 20px 10px;
+    }
+
+    /* 2-column grid for steps */
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .step-card {
+        padding: 16px 12px;
+    }
+
+    .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .step-card h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .step-card p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}

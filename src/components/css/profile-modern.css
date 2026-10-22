@@ -1,0 +1,520 @@
+/* ========================================
+   PREMIUM PROFILE DESIGN
+   Attractive across all 3 panels
+   ======================================== */
+
+#profile {
+    background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+#profile .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-layout-modern {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Hide the old green gradient header */
+.profile-card-modern {
+    display: none;
+}
+
+/* ========================================
+   FORM SECTION - PREMIUM DESIGN
+   ======================================== */
+
+.profile-form-modern {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.profile-form-modern:hover {
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.12);
+}
+
+.form-section {
+    margin-bottom: 36px;
+}
+
+.form-section:last-child {
+    margin-bottom: 0;
+}
+
+.form-section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, #10b981 0%, #14b8a6 100%) 1;
+}
+
+.section-icon {
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 14px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #111827;
+    background: #f9fafb;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #d1d5db;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #10b981;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:disabled {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+    border-color: #e5e7eb;
+}
+
+/* ========================================
+   FORM ACTIONS - PREMIUM BUTTONS
+   ======================================== */
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 2px solid #f3f4f6;
+}
+
+.btn-save-profile,
+.btn-primary {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-save-profile::before,
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-save-profile:hover::before,
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-save-profile:hover,
+.btn-primary:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-save-profile:active,
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-cancel-profile,
+.btn-secondary {
+    padding: 14px 32px;
+    background: white;
+    color: #6b7280;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel-profile:hover,
+.btn-secondary:hover {
+    background: #f9fafb;
+    border-color: #10b981;
+    color: #10b981;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SECURITY SETTINGS - PREMIUM CARDS
+   ======================================== */
+
+.security-section {
+    margin-bottom: 28px;
+}
+
+.security-section>h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.security-section>h3 .section-icon {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.security-item {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f3f4f6;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.security-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+}
+
+.security-item:hover {
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+    transform: translateX(4px);
+}
+
+.security-item:last-child {
+    margin-bottom: 0;
+}
+
+.security-item h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.security-item p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.btn-change-password,
+.btn-enable-2fa {
+    padding: 11px 24px;
+    background: white;
+    color: #f59e0b;
+    border: 2px solid #f59e0b;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+}
+
+.btn-change-password:hover,
+.btn-enable-2fa:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   NOTIFICATION PREFERENCES - PREMIUM
+   ======================================== */
+
+.notification-section {
+    margin-bottom: 28px;
+}
+
+.notification-section>h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification-section>h3 .section-icon {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f3f4f6;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.notification-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.notification-item:hover {
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+    transform: translateX(4px);
+}
+
+.notification-item:last-child {
+    margin-bottom: 0;
+}
+
+.notification-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.notification-info h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.notification-info p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ========================================
+   TOGGLE SWITCH - PREMIUM iOS STYLE
+   ======================================== */
+
+.toggle-switch {
+    position: relative;
+    width: 56px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #d1d5db;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 30px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.toggle-switch input:checked+.toggle-slider {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.toggle-switch input:checked+.toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.toggle-switch:hover .toggle-slider {
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    #profile {
+        padding: 24px 16px;
+    }
+
+    .profile-form-modern,
+    .security-item,
+    .notification-item {
+        padding: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .notification-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-save-profile,
+    .btn-cancel-profile {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-form-modern,
+.security-item,
+.notification-item {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.security-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.security-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.notification-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.notification-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.notification-item:nth-child(3) {
+    animation-delay: 0.3s;
+}

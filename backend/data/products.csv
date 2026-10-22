@@ -1,0 +1,14 @@
+id,dealer_id,name,description,price_per_kg,category,image,stock,unit,status
+1,2,Handmade Paper Sheets,Eco-friendly handmade paper sheets for crafts and art,25,Paper,Handmade Paper Sheets.jpeg,2000,kg,Active
+2,2,Metal Angles,Recycled metal angles for construction and fabrication,35,Metal,Metal Angles.jpeg,100,kg,Active
+3,2,Metal Pipes,High-quality recycled metal pipes for plumbing and construction,40,Metal,Metal Pipes.jpeg,100,kg,Active
+4,2,Plastic Planter,Decorative recycled plastic planters for gardening,18,Plastic,Plastic Planter.jpeg,100,kg,Active
+5,2,Plastic Tub,Durable recycled plastic tubs for storage,15,Plastic,Plastic Tub.jpeg,100,kg,Active
+6,2,Waste Bins,Eco-friendly waste bins made from recycled materials,22,Plastic,Waste Bins.jpeg,100,kg,Active
+7,2,Woven Paper Basket,Beautiful handwoven paper baskets for storage and decor,30,Paper,Woven Paper Basket.jpeg,100,kg,Active
+8,2,Paper Cups,Biodegradable paper cups made from recycled paper,8,Paper,paper cups.jpeg,100,kg,Active
+9,1,cable,zfzfsddf,2,Plastics,Plastic Planter.jpeg,21,kg,Rejected
+10,1,plastic bottle,Bottel made of recycled plastics,20,Plastics,paper cups.jpeg,2000,kg,Active
+11,1,Abc,"Take this items fast
+",100,Electronics,IMG_0528.png,10,kg,Active
+12,1,plastic model,it is a plastic model,599,Plastics,IMG_7063.jpg,100,kg,Active

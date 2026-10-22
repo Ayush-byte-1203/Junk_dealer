@@ -1,0 +1,364 @@
+/* ========================================
+   DEALER PROFILE STYLES
+   ======================================== */
+
+/* Dealer Business Card */
+.dealer-business-card {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    color: white;
+    box-shadow: 0 8px 24px rgba(15, 118, 110, 0.3);
+}
+
+.business-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.business-logo {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: #0f766e;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.business-info {
+    flex: 1;
+}
+
+.business-info h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+.business-type {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 12px 0;
+}
+
+.business-rating {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stars {
+    font-size: 18px;
+}
+
+.rating-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.edit-profile-btn {
+    background: white;
+    color: #0f766e;
+    border: none;
+    padding: 12px 24px;
+    font-weight: 600;
+}
+
+.edit-profile-btn:hover {
+    background: #f0fdfa;
+}
+
+/* Business Stats Grid */
+.business-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.stat-icon {
+    font-size: 36px;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-content h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 4px 0;
+    color: white;
+}
+
+.stat-content p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Profile Section Cards */
+.profile-section-card {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 24px 0;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* Business Hours */
+.business-hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.hours-item .day {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.hours-item .time {
+    font-size: 15px;
+    color: #0f766e;
+    font-weight: 600;
+}
+
+/* Materials Tags */
+.materials-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.material-tag {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+    border: 2px solid #14b8a6;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f766e;
+    transition: all 0.3s ease;
+}
+
+.material-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.2);
+}
+
+/* Reviews List */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-item {
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border-left: 4px solid #14b8a6;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.reviewer-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.reviewer-info {
+    flex: 1;
+}
+
+.reviewer-info h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+}
+
+.review-rating {
+    font-size: 14px;
+}
+
+.review-date {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Settings List */
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.setting-item-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #f8fafc;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+}
+
+.setting-item-btn:hover {
+    background: #f0fdfa;
+    border-color: #14b8a6;
+    transform: translateX(4px);
+}
+
+.setting-icon {
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting-text {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.setting-arrow {
+    font-size: 20px;
+    color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dealer-business-card {
+        padding: 24px;
+    }
+
+    .business-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .business-info h2 {
+        font-size: 24px;
+    }
+
+    .business-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hours-item {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}

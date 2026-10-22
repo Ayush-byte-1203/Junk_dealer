@@ -1,0 +1,86 @@
+/* HIGH CONTRAST TEXT COLORS - Applied globally for maximum readability */
+
+/* Force black text for all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.card__title,
+.stat-label,
+.section-header h1,
+.section-header h2,
+.modal-title,
+label,
+.label,
+.form-label {
+    color: #000000 !important;
+}
+
+/* Force very dark gray for body text */
+p,
+li,
+td,
+span,
+div {
+    color: #1f2937 !important;
+}
+
+/* Force black for table headers */
+th {
+    color: #000000 !important;
+    background-color: #f3f4f6 !important;
+}
+
+/* Force black for input text */
+input,
+textarea,
+select {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+}
+
+/* Sidebar links */
+.sidebar-link {
+    color: #1f2937 !important;
+}
+
+.sidebar-link.active,
+.sidebar-link:hover {
+    color: #000000 !important;
+}
+
+/* Navigation links - white on dark header */
+.nav-link {
+    color: #ffffff !important;
+}
+
+/* Buttons */
+.btn--primary {
+    color: #ffffff !important;
+    background-color: #10b981 !important;
+}
+
+.btn--outline {
+    color: #000000 !important;
+    border-color: #10b981 !important;
+}
+
+.btn--secondary {
+    color: #000000 !important;
+}
+
+/* Links */
+a {
+    color: #047857 !important;
+}
+
+a:hover {
+    color: #065f46 !important;
+}
+
+/* Stats */
+.stat-value {
+    color: #000000 !important;
+}

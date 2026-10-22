@@ -1,23 +1,101 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# =====================================
+# Full-Stack React + Django .gitignore
+# =====================================
 
-# dependencies
-/node_modules
+# -------------------------------------
+# Node & Frontend (React)
+# -------------------------------------
+node_modules/
+/build
+/dist
 /.pnp
 .pnp.js
 
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# -------------------------------------
+# Python & Backend (Django)
+# -------------------------------------
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Django Database & Migrations cache
+*.sqlite3
+db.sqlite3
+
+# Django static collected & media uploads
+media/
+backend/media/
+staticfiles/
+backend/staticfiles/
+
+# Python / Django Logs
+*.log
+
+# -------------------------------------
+# Environment Variables & Secrets
+# -------------------------------------
+.env
+.env.*
+!.env.example
+*.local
+
+# -------------------------------------
+# Testing & Code Coverage
+# -------------------------------------
+/coverage/
+.coverage
+.coverage.*
+*.cover
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+
+# -------------------------------------
+# IDEs & Code Editors
+# -------------------------------------
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+
+# -------------------------------------
+# Operating System Files
+# -------------------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encrypt
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini

@@ -1,0 +1,342 @@
+/* ========================================
+   FIND DEALERS PAGE STYLING
+   ======================================== */
+
+.find-dealers-page {
+    padding-bottom: 60px;
+}
+
+/* Header Section */
+.dealers-header {
+    background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-800) 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: var(--shadow-xl);
+}
+
+.dealers-header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.dealers-header p {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Search Container */
+.dealer-search-container {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    gap: 16px;
+    margin-top: -30px;
+    /* Overlap header */
+    margin-bottom: 40px;
+    border: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+
+.search-input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 200px;
+}
+
+.search-input-group label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.5px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    color: var(--color-text-muted);
+    font-size: 18px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.search-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.dealer-search-btn {
+    align-self: flex-end;
+    padding: 12px 30px;
+    font-size: 16px;
+    height: 48px;
+}
+
+/* Dealers Layout Grid */
+.dealers-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Filter Sidebar (Left) */
+/* (Currently implemented as top bar, can be moved here if complex) */
+
+/* Dealers List (Left/Main) */
+.dealers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dealers-count {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Dealer Card */
+.dealer-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    box-shadow: var(--shadow-sm);
+}
+
+.dealer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary-300);
+}
+
+.dealer-image {
+    width: 200px;
+    background: var(--color-bg-2);
+    position: relative;
+    overflow: hidden;
+}
+
+.dealer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.dealer-card:hover .dealer-image img {
+    transform: scale(1.05);
+}
+
+.verified-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-success);
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dealer-content {
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dealer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.dealer-name-section h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+.dealer-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #f59e0b;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.distance-badge {
+    background: var(--color-bg-2);
+    color: var(--color-text-secondary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dealer-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.dealer-tag {
+    background: var(--color-primary-50);
+    color: var(--color-primary-700);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dealer-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.info-point {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--color-text);
+}
+
+.info-point i {
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+.dealer-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+}
+
+/* Map Sidebar (Right) */
+.dealers-map-wrapper {
+    position: sticky;
+    top: 100px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+    height: 600px;
+}
+
+.map-header {
+    padding: 16px;
+    background: white;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#dealersMap {
+    width: 100%;
+    height: calc(100% - 60px);
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .dealers-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .dealers-map-wrapper {
+        position: relative;
+        top: 0;
+        height: 400px;
+        margin-bottom: 30px;
+        order: -1;
+        /* Show map first on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .dealer-card {
+        flex-direction: column;
+    }
+
+    .dealer-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    .dealer-search-container {
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+        margin-top: -20px;
+    }
+
+    .dealer-search-btn {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .dealers-header h1 {
+        font-size: 32px;
+    }
+}

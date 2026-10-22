@@ -1,0 +1,22 @@
+id,username,password,role,name,email,phone,location,lat,lng,joined_date,gst_number,business_address,bank_account_no,bank_ifsc,bank_name,opening_time,closing_time,closed_days,notifications_enabled
+2,dealer,dealer,dealer,Green Earth Recyclers,green@example.com,9876543211,Delhi,28.6139,77.2090,2024-01-20,GSTIN123456789,"123 Green Street, Delhi",1234567890,SBIN0001234,State Bank of India,09:00,18:00,Sunday,True
+3,admin,admin,admin,System Admin,admin@junkdealer.com,9876543212,Bangalore,12.9716,77.5946,2024-01-01,,,,,,,,,
+4,testuser_3567,password123,customer,Test User,testuser_3567@example.com,,,,,2026-01-29,,,,,,,,,
+5,pancholi,Ayush#1203,customer,ayush,ayushpancholi3@gmail.com,,,,,2026-01-29,,,,,,,,,
+6,scrap_king,dealer123,dealer,Scrap King,scrap@example.com,9800000001,Delhi,28.6139,77.2090,2024-02-01,,,,,,,,,
+7,recycle_pro,dealer123,dealer,Recycle Pro,recycle@example.com,9800000002,Mumbai,19.0760,72.8777,2024-02-02,,,,,,,,,
+8,eco_warriors,dealer123,dealer,Eco Warriors,eco@example.com,9800000003,Bangalore,12.9716,77.5946,2024-02-03,,,,,,,,,
+9,metal_masters,dealer123,dealer,Metal Masters,metal@example.com,9800000004,Chennai,13.0827,80.2707,2024-02-04,,,,,,,,,
+10,plastic_planet,dealer123,dealer,Plastic Planet,plastic@example.com,9800000005,Pune,18.5204,73.8567,2024-02-05,,,,,,,,,
+11,rahul_verma,user123,customer,Rahul Verma,rahul@example.com,9900000001,Delhi,28.6139,77.2090,2024-02-05,,,,,,,,,
+13,amit_patel,user123,customer,Amit Patel,amit@example.com,9900000003,Ahmedabad,23.0225,72.5714,2024-02-07,,,,,,,,,
+14,sara_khan,user123,customer,Sara Khan,sara@example.com,9900000004,Hyderabad,17.3850,78.4867,2024-02-08,,,,,,,,,
+15,david_dsouza,user123,customer,David D'Souza,david@example.com,9900000005,Goa,15.2993,74.1240,2024-02-09,,,,,,,,,
+16,manjalpur_scrap,dealer123,dealer,Manjalpur Scrap Traders,manjalpur@example.com,9825000001,"Manjalpur, Vadodara",22.2640,73.1900,2026-02-01,,,,,,,,,
+17,vadodara_eco,dealer123,dealer,Vadodara Eco Recyclers,beco@example.com,9825000002,"Makarpura, Vadodara",22.2600,73.1850,2026-02-01,,,,,,,,,
+18,gujarat_waste,dealer123,dealer,Gujarat Waste Solutions,gujarat@example.com,9825000003,"GIDC, Vadodara",22.2700,73.1950,2026-02-01,,,,,,,,,
+19,city_scrap_vado,dealer123,dealer,City Scrap Vadodara,cityvado@example.com,9825000004,"Alkapuri, Vadodara",22.3100,73.1800,2026-02-01,,,,,,,,,
+20,green_vado,dealer123,dealer,Green Vadodara Traders,greenvado@example.com,9825000005,"Manjalpur Naka, Vadodara",22.2680,73.1920,2026-02-0121,,,,,,,,,
+21,parul_recyclers,dealer123,dealer,Parul Uni Recyclers,parulrec@example.com,9825000006,"Limda, Waghodia",22.2890,73.3640,2026-02-01,,Near Parul University Gate 1,,,,09:00,18:00,Sunday,True
+22,waghodia_scrap,dealer123,dealer,Waghodia Scrap Center,waghodia@example.com,9825000007,Waghodia Road,22.2850,73.3600,2026-02-01,,Opposite Parul Sevashram,,,,10:00,20:00,Sunday,True
+23,campus_green,dealer123,dealer,Campus Green Waste,campus@example.com,9825000008,Ishwarpura,22.2920,73.3680,2026-02-01,,"Ishwarpura Village, Waghodia",,,,08:00,17:00,Saturday,True

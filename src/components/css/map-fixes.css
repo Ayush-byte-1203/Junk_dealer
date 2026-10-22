@@ -1,0 +1,103 @@
+/* Map Container Fixes */
+#userMap,
+#pickupsMap {
+    width: 100% !important;
+    height: 500px !important;
+    min-height: 500px !important;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 1 !important;
+    position: relative !important;
+    background: #e0e0e0;
+}
+
+/* Fix Leaflet map rendering issues */
+.leaflet-container {
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    position: relative !important;
+    background: #e0e0e0;
+}
+
+/* Ensure map tiles load properly */
+.leaflet-tile-container {
+    z-index: 1 !important;
+}
+
+.leaflet-tile {
+    max-width: none !important;
+    max-height: none !important;
+}
+
+.leaflet-pane {
+    z-index: auto !important;
+}
+
+.leaflet-map-pane {
+    z-index: auto !important;
+}
+
+.leaflet-tile-pane {
+    z-index: 200 !important;
+}
+
+/* Fix map controls */
+.leaflet-control-zoom {
+    z-index: 1000 !important;
+}
+
+.leaflet-control-attribution {
+    z-index: 1000 !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Ensure map is visible */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 20px 0;
+}
+
+/* Fix for gray tiles issue */
+.leaflet-container img {
+    max-width: none !important;
+}
+
+/* Ensure proper rendering */
+.leaflet-container .leaflet-tile {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Map Card Styles */
+.map-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    margin-bottom: 30px;
+}
+
+.floating-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card__header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    background: #f9f9f9;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
