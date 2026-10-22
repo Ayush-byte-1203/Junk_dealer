@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# JunkDealer - Sustainable Waste Management Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+JunkDealer is a premium, modern web application designed to bridge the gap between waste generators (Users) and certified scrap dealers (Dealers). It facilitates seamless scheduling of pickups, real-time rate tracking, and efficient recycling management with a focus on ease of use and environmental impact.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📂 Project Structure
 
-### `npm start`
+### Root Directory
+- `backend/`: Django backend server and API logic.
+- `src/`: React frontend source code.
+- `public/`: Static assets for the React application.
+- `package.json`: Frontend dependencies and scripts.
+- `tailwind.config.js`: Tailwind CSS configuration for styling.
+- `postcss.config.js`: PostCSS configuration for CSS processing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend Structure (`src/`)
+- `components/`: Reusable UI elements.
+  - `admin/`: Admin-specific components.
+  - `user/`: User-specific components.
+  - `ui/`: Base UI components (buttons, inputs, cards).
+  - `css/`: Component-specific styling.
+- `pages/`: Full-page views and routing.
+  - `admin/`: Pages for the admin board.
+  - `dealer/`: Pages for the dealer dashboard.
+  - `user/`: Pages for the user dashboard.
+- `context/`: React Context providers for global state (e.g., Authentication).
+- `data/`: Local data files and constants.
+- `layouts/`: Shared layout components (Navbar, Footer, Sidebar).
+- `lib/`: Utility libraries and configurations.
+- `utils/`: Common helper functions.
+- `Images/`: Static imagery for the frontend.
+- `translations.js`: Localization support for multiple languages.
+- `App.js`: Main application component and routing logic.
+- `index.js`: Frontend entry point.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend Structure (`backend/`)
+- `authentication/`: User registration and login logic.
+- `admin_dashboard/`: Logic for the administrative interface.
+- `dealer_dashboard/`: Features and data for dealers.
+- `user_dashboard/`: Features and data for standard users.
+- `payments/`: Payment processing and transaction logic.
+- `junkdealer_project/`: Main Django project configuration settings.
+- `data/`: Backend data storage (CSV and persistent files).
+- `utils/`: Backend-specific utility scripts.
+- `manage.py`: Django management CLI.
+- `requirements.txt`: Python package dependencies.
+- `db.sqlite3`: Local SQLite database.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Key Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **For Users**
+- **Intuitive Dashboard**: Monitor earnings, pickups, and your recycling footprint.
+- **Easy Booking**: Schedule waste pickups with a few clicks.
+- **Live Rate Card**: Access real-time market rates for various materials.
+- **Multilingual Support**: Available in English, Hindi, and Gujarati.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **For Dealers**
+- **Smart Management**: Manage incoming orders and inventory analytics.
+- **Dynamic Pricing**: Update scrap prices and material availability.
+- **Logistics Tracking**: Accept/reject and track pickup requests in real-time.
 
-### `npm run eject`
+### **Authentication**
+- **Role-Based Access**: Specialized interfaces for Admin, Dealer, and User.
+- **Secure Registration**: Streamlined signup process for all roles.
+- **Demo Access**: Instant testing with pre-defined credentials.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Frontend**: React.js, Tailwind CSS, Lucide React, Framer Motion, Recharts.
+- **Backend**: Django (Python), Django REST Framework.
+- **Database**: SQLite (Production-ready metadata) & CSV (Portability).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📦 Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
+- **Node.js**: v18.x or higher
+- **Python**: v3.9 or higher
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation & Setup
 
-### Code Splitting
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-repo/junkdealer.git
+   cd junkdealer
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Frontend Setup**
+   ```bash
+   npm install
+   npm start
+   ```
+   *Runs on `http://localhost:3000`*
 
-### Analyzing the Bundle Size
+3. **Backend Setup**
+   In a separate terminal:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   python manage.py runserver
+   ```
+   *Runs on `http://localhost:8000`*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔑 Demo Credentials
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Role | Username | Password |
+| :--- | :--- | :--- |
+| **Admin** | `admin` | `admin` |
+| **Dealer** | `dealer` | `dealer` |
+| **User** | `user` | `user` |
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with 💚 by the JunkDealer Team.
+# Junk_dealer
